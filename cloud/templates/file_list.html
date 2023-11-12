@@ -1,0 +1,29 @@
+{% block content %}
+    {% if file_num > 0 %}
+        <h2>your files:</h2>
+        <ul>
+            {% for file in files %}
+                <li>
+                    title: {{file.title}}
+                    name: {{file.name}}
+                    <a href="download/{{file.id}}">Download</a>
+                    <a href="share/{{file.id}}">Share</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% if shared_file_num > 0 %}
+        <h2>shared files:</h2>
+        <ul>
+            {% for shared_file in shared_files %}
+                <li>
+                    title: {{shared_file.shared_file.title}}
+                    name: {{shared_file.shared_file.name}}
+                    <a href="download/{{shared_file.shared_file.id}}">Download</a>
+                </li>
+            {% endfor %}
+        </ul> 
+    {% endif %}
+    <a href="upload">Upload files</a>
+    <a href="logout">Logout</a>
+{% endblock %}

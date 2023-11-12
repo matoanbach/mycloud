@@ -1,0 +1,13 @@
+{% block content %}
+<h2>Upload File</h2>
+<form method="post" enctype="multipart/form-data" >
+    {% csrf_token %}
+    <label for="title_input">Tile: </label>
+    <input id="title_input" type="text" value="" name="title" />
+    <label for="file_input">File:</label>
+    <input id="file_input" type="file" value="" name="file" />
+    <button type="submit">Upload</button>
+</form>
+<a href="file_list">See all files</a>
+<a href="logout">Logout</a>
+{% endblock %}

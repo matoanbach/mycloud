@@ -1,0 +1,8 @@
+{% block content %}
+<h2>Error: <h3>{{message}}</h3></h2>
+
+
+<a href="{% url 'cloud:upload' %}">Upload files</a>
+<a href="{% url 'cloud:file_list' %}">See all files</a>
+<a href="{% url 'cloud:logout' %}">Logout</a>
+{% endblock %}

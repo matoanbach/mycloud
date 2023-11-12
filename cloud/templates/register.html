@@ -1,0 +1,13 @@
+{% block content %}
+    <form action="{% url 'cloud:register' %}" method="post">
+        {% csrf_token %}
+        <label for="name_input">Name: </label>
+        <input id="name_input" type="text" value="" name="name" />
+        <label for="email_input">Email:</label>
+        <input id="email_input" type="email" value="" name="email" />
+        <label for="password_input">Password:</label>
+        <input id="password_input" type="password" value="" name="password" />
+        <button type="submit">Register</button>
+    </form>
+    <h3>Have an account already. <a href="login">Login</a></h3>
+{% endblock %}

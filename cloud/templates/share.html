@@ -1,0 +1,13 @@
+{% block content %}
+<h2>Sharing File</h2>
+<form action="{% url 'cloud:share' file.id %}" method="post">
+    {% csrf_token %}
+    <h2>Who you want to share the file {{file.name}} with</h2>
+    <label for="email_input">User Email:</label>
+    <input id="email_input" type="email" value="" name="email" />
+    <button type="submit">Share</button>
+</form>
+<a href="{% url 'cloud:upload' %}">Upload files</a>
+<a href="{% url 'cloud:file_list' %}">See all files</a>
+<a href="{% url 'cloud:logout' %}">Logout</a>
+{% endblock %}
