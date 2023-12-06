@@ -10,6 +10,7 @@ Note: in this assignment, we will use unittest library just for ease. The librar
 We will use pytest library to generate a report for the test we just did. In order to do this, you need to: <br>
 <li> Step 1: install pytest using *python3 -m pip install pytest pytest-django* <br>
 <li> Step 2: create pytest.ini in the root folder and then copy these line into the file: <br>
+
 ```
 # pytest.ini
 [pytest]
@@ -17,6 +18,7 @@ DJANGO_SETTINGS_MODULE = mycloud.settings
 python_files = 'cloud/tests/tests.py'
 addopts = -v --tb=line --html=report.html
 ```
+
 Step 3: run *pytest* on your terminal <br>
 Step 4: check report.html for the report
 
@@ -35,6 +37,7 @@ you dont see your branch that you just created, you may have to repeat step 3<br
 find . -path "_/migrations/_.pyc" -delete<br>
 --> this is to delete my migrations file (everyone might have a different migration that works for different computers)<br>
 step 6: navigate to settings.py and change your database<br>
+
 ```
 DATABASES = {
     'default': {
@@ -47,5 +50,6 @@ DATABASES = {
     }
 }
 ```
+
 step 7: run command  *python manage.py makemigrations* and then *manage.py migrate*<br>
 step 8: spin up the server *python manage.py server*<br>
