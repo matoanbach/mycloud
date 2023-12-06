@@ -9,13 +9,13 @@ We will use pytest library to generate a report for the test we just did. In ord
 Step 1: install pytest using "python3 -m pip install pytest pytest-django"
 Step 2: create pytest.ini in the root folder and then copy these line:
 
-<ul>
-<li># pytest.ini</li>
-<li>[pytest]</li>
-<li>DJANGO_SETTINGS_MODULE = mycloud.settings</li>
-<li>python_files = 'cloud/tests/tests.py'</li>
-<li>addopts = -v --tb=line --html=report.html</li>
-</ul>
+```
+# pytest.ini
+[pytest]
+DJANGO_SETTINGS_MODULE = mycloud.settings
+python_files = 'cloud/tests/tests.py'
+addopts = -v --tb=line --html=report.html
+```
 Read this github article: https://www.nobledesktop.com/learn/git/git-branches. This link includes quite enough git command. <br>
 
 After reading, you can proceed as follow:<br>
