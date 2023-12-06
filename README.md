@@ -28,16 +28,18 @@ step 5: now run: find . -path "_/migrations/_.py" -not -name "**init**.py" -dele
 find . -path "_/migrations/_.pyc" -delete<br>
 --> this is to delete my migrations file (everyone might have a different migration that works for different computers)<br>
 step 6: navigate to settings.py and change your database<br>
-DATABASES = {<br>
-'default': {<br>
-'ENGINE': 'django.db.backends.postgresql_psycopg2',<br>
-'NAME': 'your database name', <br>
-'USER': 'your user name',<br>
-'PASSWORD': 'your password',<br>
-'HOST': '127.0.0.1', <br>
-'PORT': '5432',<br>
-}<br>
-}<br>
+```
+DATABASES = {
+    'default': {
+    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    'NAME': 'your database name', 
+    'USER': 'your user name',
+    'PASSWORD': 'your password',
+    'HOST': '127.0.0.1', 
+    'PORT': '5432',<
+    }
+}
+```
 step 7: run command: python manage.py makemigrations<br>
 python manage.py migrate<br>
 step 8: spin up the server: python manage.py server<br>
